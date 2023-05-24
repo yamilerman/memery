@@ -1,0 +1,129 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #00FF00;
+}
+
+.conteiner {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+
+}
+
+.TituloPrincipal {
+    text-align: center;
+    font-size: 3rem;
+    color: black;
+    margin-top: 3%;
+}
+
+.pieDePagina {
+    text-align: center;
+    font-size: 0.8rem;
+    color: black;
+    padding-top: 3%;
+}
+
+.final {
+    text-align: center;
+    font-size: 0.7rem;
+    color: black;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 200px 1fr;
+    gap: 1%;
+    row-gap: 15%;
+
+}
+
+.card {
+    height: 250px;
+    width: 220px;
+    background-color: black;
+    border-radius: 4px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card img {
+    width: 85%;
+    max-height: 220px;
+    opacity: 0;
+    transition: 0.3s all ease;
+}
+
+.card.clicked {
+    background-color: black;
+}
+
+.card.checked {
+    background-color: black;
+}
+
+.card.clicked img,
+.card.checked img {
+    opacity: 1;
+}
+
+.card.shake {
+    background-color: #4B0082;
+    animation: shake 0.9s;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
